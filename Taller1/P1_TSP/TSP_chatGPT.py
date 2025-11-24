@@ -4,9 +4,6 @@ import itertools
 from Taller1.P1_TSP.util import plotear_ruta, generar_ciudades_con_distancias
 
 
-from typing import List, Tuple, Dict
-import itertools
-
 class TSP:
     def __init__(self, ciudades: Dict[str, Tuple[float, float]], distancias: Dict[Tuple[str, str], float]):
         self.ciudades = ciudades
@@ -41,23 +38,29 @@ class TSP:
         from util import plotear_ruta
         plotear_ruta(self.ciudades, ruta, mostrar_anotaciones)
 
+
+# Integración con study_case_1 y study_case_2
+
 def study_case_1():
+    from util import generar_ciudades_con_distancias
     n_cities = 10
     ciudades, distancias = generar_ciudades_con_distancias(n_cities)
     tsp = TSP(ciudades, distancias)
-    ruta = ciudades.keys()
-    # ruta = tsp.encontrar_la_ruta_mas_corta()
+
+    ruta = tsp.encontrar_la_ruta_mas_corta()
     tsp.plotear_resultado(ruta)
 
+
 def study_case_2():
+    from util import generar_ciudades_con_distancias
     n_cities = 100
     ciudades, distancias = generar_ciudades_con_distancias(n_cities)
     tsp = TSP(ciudades, distancias)
-    ruta = ciudades.keys()
-    # ruta = tsp.encontrar_la_ruta_mas_corta()
-    tsp.plotear_resultado(ruta, False)
+
+    # Para 100 ciudades, fuerza bruta es imposible → usar ruta aleatoria como placeholder
+    ruta = list(ciudades.keys())
+    tsp.plotear_resultado(ruta, mostrar_anotaciones=False)
 
 
 if __name__ == "__main__":
-    # Solve the TSP problem
     study_case_1()
