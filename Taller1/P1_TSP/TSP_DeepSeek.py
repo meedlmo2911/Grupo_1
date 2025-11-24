@@ -1,20 +1,18 @@
-[file name]: TSP.py
-[file content begin]
 from typing import List, Tuple
 import itertools
 import time
 
-from Taller1.P1_TSP.util import plotear_ruta, generar_ciudades_con_distancias
+from util import plotear_ruta, generar_ciudades_con_distancias #Imporacion de las funciones del codigo 'util'
 
 
-class TSP:
-    def __init__(self, ciudades, distancias):
+class TSP: 
+    def __init__(self, ciudades, distancias): #TSP definido con sus atributos
         self.ciudades = ciudades
         self.distancias = distancias
         self.mejor_ruta = None
         self.mejor_distancia = float('inf')
 
-    def calcular_distancia_ruta(self, ruta: List[str]) -> float:
+    def calcular_distancia_ruta(self, ruta: List[str]) -> float: #Calcular distancia ruta es un método que utiliza ruta, una lista de las distancias entre cada ciudad.
         """Calcula la distancia total de una ruta"""
         distancia_total = 0
         n = len(ruta)
@@ -126,4 +124,3 @@ if __name__ == "__main__":
     # Solve the TSP problem
     study_case_1()
     study_case_2()
-[file content end]
