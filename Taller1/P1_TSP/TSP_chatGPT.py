@@ -1,7 +1,7 @@
 from typing import List, Tuple, Dict
 import itertools
 
-from Taller1.P1_TSP.util import plotear_ruta, generar_ciudades_con_distancias
+from util import plotear_ruta, generar_ciudades_con_distancias
 
 
 class TSP:
