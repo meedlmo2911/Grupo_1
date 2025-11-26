@@ -5,7 +5,7 @@
 - **Nombre del grupo**: Grupo #
 - **Integrantes del grupo**:
 
-    • Carla Parra
+    • Ricardo Parra
 
     • xxxxx
 
