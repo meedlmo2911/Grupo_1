@@ -12,7 +12,7 @@ class TSP:
         self.mejor_ruta = None
         self.mejor_distancia = float('inf')
 
-    def calcular_distancia_ruta(self, ruta: List[str]) -> float: #Calcular distancia ruta es un método que utiliza ruta, una lista de las distancias entre cada ciudad.
+    def calcular_distancia_ruta(self, ruta: List[str]) -> float: 
         """Calcula la distancia total de una ruta"""
         distancia_total = 0
         n = len(ruta)
